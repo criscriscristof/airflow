@@ -292,14 +292,6 @@ from airflow.timetables.trigger import DeltaTriggerTimetable
 
 ---
 
-## 7. Twoje DAGi – rekomendacja
-
-| DAG                     | Typ                    | Rekomendowany timetable                                                                                                        |
-| :----------------------- | :---------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
-| `pbirs_refresh_monitor` | Monitoring (co 15 min) | `CronTriggerTimetable("*/15 * * * *")`                                                                                         |
-| `daily_dag_run_summary` | Raport dzienny         | Zależy: jeśli przetwarza dane za okres → `CronDataIntervalTimetable`, jeśli tylko wysyła podsumowanie → `CronTriggerTimetable` |
-
----
 
 ## Import paths – ściągawka
 
